@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FSTI Universitas Widya Gama Malang</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: #0b1150;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Header */
+    header {
+      padding: 20px 0;
+      border-bottom: 2px solid #2c3e94;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #89aaff;
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #89aaff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #c1d1ff;
+    }
+
+    /* Hero section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 40px 0;
+      align-items: center;
+    }
+
+    .hero-text {
+      flex: 1 1 400px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #cbd3ff;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #dfe5ff;
+    }
+
+    .hero-img {
+      flex: 1 1 400px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      border: 5px solid #2c3e94;
+    }
+
+    .hero-img img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 300px;
+    }
+
+    /* About section */
+    section.about {
+      background: #162a75;
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      margin-bottom: 50px;
+    }
+
+    section.about h3 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #a6b2ff;
+    }
+
+    section.about p {
+      font-size: 1.1rem;
+      color: #cad3ff;
+      text-align: justify;
+    }
+
+    /* Programs Section */
+    section.programs {
+      margin-bottom: 50px;
+    }
+
+    section.programs h3 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #a6b2ff;
+      text-align: center;
+    }
+
+    .program-list {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .program {
+      background: #1c337d;
+      flex: 1 1 250px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+
+    .program:hover {
+      background: #2c3e94;
+    }
+
+    .program h4 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+      color: #cdd2ff;
+    }
+
+    .program p {
+      font-size: 1rem;
+      color: #d0d5ff;
+    }
+
+    /* Footer */
+    footer {
+      padding: 30px 0;
+      background: #081045;
+      text-align: center;
+      color: #7a87d1;
+      font-size: 0.9rem;
+      border-top: 1px solid #2c3e94;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Background wave shape bottom */
+    .wave-container {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .wave-svg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      fill: #fff;
+      transform: translateY(35%);
+      border-radius: 0 0 100% 100% / 0 0 100% 100%;
+      box-shadow: 0px -10px 30px 5px rgba(11, 17, 80, 0.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+      .hero-img {
+        height: 250px;
+      }
+      .program-list {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="container">
+    <h1>FSTI UWG Malang</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#programs">Program Studi</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Fakultas Sains dan Teknologi Informasi</h2>
+        <p>
+          Fakultas Sains dan Teknologi Informasi (FSTI) Universitas Widya Gama Malang adalah pusat pengembangan ilmu sains dan teknologi yang berfokus pada inovasi dan pembelajaran berkualitas tinggi. FSTI berkomitmen untuk mencetak lulusan yang siap menghadapi tantangan teknologi global dengan landasan akademik yang kuat dan kompetensi profesional unggul.
+        </p>
+      </div>
+      <div class="hero-img">
+        <img src="https://timesindonesia.co.id/_next/image?url=https%3A%2F%2Fcdn.timesmedia.co.id%2Fimages%2F2020%2F09%2F16%2FGedung-baru-Kampus-II-UWG.jpg&w=1200&q=70" alt="Gedung Universitas Widya Gama Malang" />
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h3>Tentang FSTI</h3>
+      <p>
+        Fakultas Sains dan Teknologi Informasi Universitas Widya Gama Malang berdiri sebagai fakultas yang memfasilitasi pengembangan ilmu computer science, matematika, statistika, dan bidang-bidang ilmu lainnya yang berkaitan dengan teknologi dan sains. FSTI menghadirkan lingkungan akademik yang mendukung riset inovatif dan kurikulum up-to-date yang sesuai kebutuhan industri dan masyarakat di era digital saat ini.
+      </p>
+    </section>
+
+    <section class="programs" id="programs">
+      <h3>Program Studi</h3>
+      <div class="program-list">
+        <article class="program">
+          <h4>Teknik Informatika</h4>
+          <p>Mempelajari desain, pengembangan, dan implementasi sistem perangkat lunak dan teknologi komputer yang mutakhir.</p>
+        </article>
+        <article class="program">
+          <h4>Sistem Informasi</h4>
+          <p>Fokus pada integrasi teknologi informasi dengan kebutuhan organisasi bisnis dan pengembangan solusi manajemen data.</p>
+        </article>
+        <article class="program">
+          <h4>Matematika</h4>
+          <p>Program studi yang mendalami konsep-konsep dasar dan terapan matematika untuk berbagai solusi ilmu pengetahuan dan teknologi.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="about">
+      <h3>Kontak Kami</h3>
+      <p>
+        Fakultas Sains dan Teknologi Informasi<br />
+        Universitas Widya Gama Malang<br />
+        Jl. Semarang No. 5, Malang<br />
+        Telp: (0341) 488888<br />
+        Email: fstiwgm@uwgm.ac.id
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Fakultas Sains dan Teknologi Informasi - Universitas Widya Gama Malang
+  </footer>
+
+  <div class="wave-container" aria-hidden="true">
+    <svg class="wave-svg" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path fill="#fff" fill-opacity="1" d="M0,224L48,218.7C96,213,192,203,288,160C384,117,480,43,576,48C672,53,768,139,864,176C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </div>
+</body>
+</html>
